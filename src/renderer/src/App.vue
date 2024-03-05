@@ -1,22 +1,22 @@
 <script setup lang="ts">
-// import Versions from './components/Versions.vue'
+import Versions from './components/Versions.vue'
 
-// const ipcHandle = () => window.electron.ipcRenderer.send('ping')
-// const ipcHandleAdd = () => {
-//   window.electron.ipcRenderer.send('ipcHandleAdd')
-// }
-// const ipcHandleAdd1 = () => {
-//   window.electron.ipcRenderer.send('ipcHandleAdd1')
-// }
+const ipcHandle = () => window.electron.ipcRenderer.send('ping')
+const ipcHandleAdd = () => {
+  window.electron.ipcRenderer.send('ipcHandleAdd')
+}
+const ipcHandleAdd1 = () => {
+  window.electron.ipcRenderer.send('ipcHandleAdd1')
+}
 import zhCn from 'element-plus/dist/locale/zh-cn'
 const locale = zhCn
 </script>
 
 <template>
-  <el-config-provider :locale="locale">
+  <!-- <el-config-provider :locale="locale">
     <RouterView></RouterView>
-  </el-config-provider>
-  <!-- <img alt="logo" class="logo" src="./assets/electron.svg" />
+  </el-config-provider> -->
+  <img alt="logo" class="logo" src="./assets/electron.svg" />
   <div class="creator">Powered by electron-vite</div>
   <div class="text">
     Build an Electron app with
@@ -38,5 +38,5 @@ const locale = zhCn
       <a target="_blank" rel="noreferrer" @click="ipcHandleAdd1">Add1</a>
     </div>
   </div>
-  <Versions /> -->
+  <Versions />
 </template>
